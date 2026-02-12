@@ -60,17 +60,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize the FastMCP server
 # Make sure to use a standard variable name that can be discovered automatically
-server = FastMCP(
-    "Document Operations", 
-    description="MCP server for document operations (Word, Excel, PDF)",
-    dependencies=[
-        "python-docx", 
-        "pandas", 
-        "openpyxl", 
-        "reportlab", 
-        "docx2pdf",
-    ]
-)
+server = FastMCP("Document Operations")
 
 # Also expose as mcp for current code compatibility
 mcp = server
